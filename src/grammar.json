@@ -19,6 +19,10 @@
             },
             {
               "type": "SYMBOL",
+              "name": "package"
+            },
+            {
+              "type": "SYMBOL",
               "name": "unit"
             },
             {
@@ -171,6 +175,205 @@
         {
           "type": "SYMBOL",
           "name": "kEndDot"
+        }
+      ]
+    },
+    "package": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "kPackage"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "moduleName"
+        },
+        {
+          "type": "STRING",
+          "value": ";"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "packageRequires"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "packageContains"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "kEndDot"
+        }
+      ]
+    },
+    "packageRequires": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "kRequires"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "REPEAT1",
+                      "content": {
+                        "type": "PREC",
+                        "value": 0,
+                        "content": {
+                          "type": "SEQ",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "moduleName"
+                            },
+                            {
+                              "type": "STRING",
+                              "value": ","
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "moduleName"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ";"
+        }
+      ]
+    },
+    "packageContains": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "kContains"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "REPEAT1",
+                      "content": {
+                        "type": "PREC",
+                        "value": 0,
+                        "content": {
+                          "type": "SEQ",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "packageContainsItem"
+                            },
+                            {
+                              "type": "STRING",
+                              "value": ","
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "packageContainsItem"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": ";"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "packageContainsItem": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PREC_RIGHT",
+          "value": 1,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "moduleName"
+              },
+              {
+                "type": "STRING",
+                "value": "in"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "literalString"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "moduleName"
         }
       ]
     },
@@ -4525,6 +4728,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "interpString"
+        },
+        {
+          "type": "SYMBOL",
           "name": "literalString"
         },
         {
@@ -4544,6 +4751,17 @@
           "name": "kFalse"
         }
       ]
+    },
+    "interpString": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 1,
+        "content": {
+          "type": "PATTERN",
+          "value": "\\$'(?:[^']|'')*'"
+        }
+      }
     },
     "literalString": {
       "type": "REPEAT1",
@@ -6097,6 +6315,19 @@
             {
               "type": "SYMBOL",
               "name": "kClass"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "kManaged"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "kRecord"
+                }
+              ]
             },
             {
               "type": "SYMBOL",
@@ -8754,6 +8985,11 @@
       "value": "library",
       "flags": "i"
     },
+    "kPackage": {
+      "type": "PATTERN",
+      "value": "package",
+      "flags": "i"
+    },
     "kUnit": {
       "type": "PATTERN",
       "value": "unit",
@@ -8762,6 +8998,16 @@
     "kUses": {
       "type": "PATTERN",
       "value": "uses",
+      "flags": "i"
+    },
+    "kRequires": {
+      "type": "PATTERN",
+      "value": "requires",
+      "flags": "i"
+    },
+    "kContains": {
+      "type": "PATTERN",
+      "value": "contains",
       "flags": "i"
     },
     "kInterface": {
@@ -8916,6 +9162,11 @@
     "kRecord": {
       "type": "PATTERN",
       "value": "record",
+      "flags": "i"
+    },
+    "kManaged": {
+      "type": "PATTERN",
+      "value": "managed",
       "flags": "i"
     },
     "kObjcclass": {
@@ -9282,7 +9533,7 @@
     },
     "kSealed": {
       "type": "PATTERN",
-      "value": "seled",
+      "value": "sealed",
       "flags": "i"
     },
     "kDynamic": {
@@ -9624,10 +9875,14 @@
     ],
     [
       "declTypes"
+    ],
+    [
+      "moduleName"
     ]
   ],
   "precedences": [],
   "externals": [],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }

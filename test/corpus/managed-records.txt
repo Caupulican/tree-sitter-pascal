@@ -1,0 +1,17 @@
+===
+Managed Record 1 - Members
+===
+
+type
+  a = managed record
+    b: c;
+  end;
+
+---
+
+(root
+  (declTypes (kType)
+    (declType (identifier) (kEq)
+      (declClass (kManaged) (kRecord)
+        (declField (identifier) (type (typeref (identifier))))
+        (kEnd)))))

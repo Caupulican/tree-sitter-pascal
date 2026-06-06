@@ -2,8 +2,11 @@
 [
 	(kProgram)
 	(kLibrary)
+	(kPackage)
 	(kUnit)
 	(kUses)
+	(kRequires)
+	(kContains)
 
 	(kBegin)
 	(kEnd)
@@ -36,6 +39,7 @@
 	(kDispInterface)
 	(kObject)
 	(kRecord)
+	(kManaged)
 	(kObjcclass)
 	(kObjccategory)
 	(kObjcprotocol)
@@ -208,6 +212,7 @@
 ; -- Literals
 
 (literalNumber)   @number
+(interpString)   @string
 (literalString)   @string
 
 ; -- Comments

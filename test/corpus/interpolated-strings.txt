@@ -1,0 +1,13 @@
+===
+Interpolated String 1 - Constant
+===
+
+const
+  a = $'Hello {name}!';
+
+---
+
+(root
+  (declConsts (kConst)
+    (declConst (identifier)
+      (defaultValue (kEq) (interpString)))))

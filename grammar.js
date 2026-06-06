@@ -292,12 +292,14 @@ module.exports = grammar({
 		// make sense, but for Treesitter it does), so we need another conflict
 		// here.
 		//...enable_if(lambda, [ $.lambda ]),
+		[$.moduleName],
 	],
 
 	rules: {
 		root:               $ => optional(choice(
 			$.program,
 			$.library,
+			$.package,
 			$.unit,
 			$._definitions // For include files
 		)),
@@ -327,6 +329,26 @@ module.exports = grammar({
 				$.finalization,
 			)),
 			$.kEnd, $.kEndDot
+		),
+
+		package:            $ => seq(
+			$.kPackage, $.moduleName, ';',
+			optional($.packageRequires),
+			optional($.packageContains),
+			$.kEndDot
+		),
+
+		packageRequires:    $ => seq($.kRequires, delimited($.moduleName), ';'),
+
+		packageContains:    $ => seq(
+			$.kContains,
+			delimited($.packageContainsItem),
+			optional(';')
+		),
+
+		packageContainsItem: $ => choice(
+			prec.right(1, seq($.moduleName, 'in', $.literalString)),
+			$.moduleName
 		),
 
 		interface:       $ => seq($.kInterface, optional($._declarations)),
@@ -576,10 +598,12 @@ module.exports = grammar({
 		// LITERALS -----------------------------------------------------------
 
 		_literal:        $ => choice(
+			$.interpString,
 			$.literalString,
 			$.literalNumber,
 			$.kNil, $.kTrue, $.kFalse
 		),
+		interpString:    $ => token(prec(1, /\$'(?:[^']|'')*'/)),
 		literalString:   $ => repeat1($._literalString),
 		_literalString:  $ => choice(/'[^']*'/, $.literalChar),
 		literalChar:     $ => seq('#', $._literalInt),
@@ -745,7 +769,7 @@ module.exports = grammar({
 		declClass:       $ => seq(
 			optional($.kPacked),
 			choice(
-				$.kClass, $.kRecord, $.kObject,
+				$.kClass, seq($.kManaged, $.kRecord), $.kRecord, $.kObject,
 				...enable_if(objc,
 					$.kObjcclass, $.kObjccategory, $.kObjcprotocol
 				)
@@ -1017,8 +1041,11 @@ module.exports = grammar({
 
 		kProgram:          $ => /program/i,
 		kLibrary:          $ => /library/i,
+		kPackage:          $ => /package/i,
 		kUnit:             $ => /unit/i,
 		kUses:             $ => /uses/i,
+		kRequires:         $ => /requires/i,
+		kContains:         $ => /contains/i,
 		kInterface:        $ => /interface/i,
 		kDispInterface:    $ => /dispinterface/i,
 		kImplementation:   $ => /implementation/i,
@@ -1056,6 +1083,7 @@ module.exports = grammar({
 		kInterface:        $ => /interface/i,
 		kObject:           $ => /object/i,
 		kRecord:           $ => /record/i,
+		kManaged:          $ => /managed/i,
 		kObjcclass:        $ => /objcclass/i,
 		kObjccategory:     $ => /objccategory/i,
 		kObjcprotocol:     $ => /objcprotocol/i,
@@ -1139,7 +1167,7 @@ module.exports = grammar({
 		kStatic:           $ => /static/i,
 		kVirtual:          $ => /virtual/i,
 		kAbstract:         $ => /abstract/i,
-		kSealed:           $ => /seled/i,
+		kSealed:           $ => /sealed/i,
 		kDynamic:          $ => /dynamic/i,
 		kOverride:         $ => /override/i,
 		kOverload:         $ => /overload/i,

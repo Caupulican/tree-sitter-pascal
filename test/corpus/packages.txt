@@ -1,0 +1,20 @@
+===
+Package 1 - Requires and Contains
+===
+
+package Pkg;
+requires rtl, vcl;
+contains Foo in 'foo.pas', Bar in 'bar.pas';
+.
+
+---
+
+(root
+  (package (kPackage) (moduleName (identifier))
+    (packageRequires (kRequires)
+      (moduleName (identifier))
+      (moduleName (identifier)))
+    (packageContains (kContains)
+      (packageContainsItem (moduleName (identifier)) (literalString))
+      (packageContainsItem (moduleName (identifier)) (literalString)))
+    (kEndDot)))

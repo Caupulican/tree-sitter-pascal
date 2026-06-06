@@ -52,6 +52,10 @@
           "named": true
         },
         {
+          "type": "interpString",
+          "named": true
+        },
+        {
           "type": "kFalse",
           "named": true
         },
@@ -173,6 +177,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -274,6 +282,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -571,6 +583,10 @@
           "named": true
         },
         {
+          "type": "interpString",
+          "named": true
+        },
+        {
           "type": "kCase",
           "named": true
         },
@@ -788,6 +804,10 @@
           "named": true
         },
         {
+          "type": "interpString",
+          "named": true
+        },
+        {
           "type": "kFalse",
           "named": true
         },
@@ -948,6 +968,10 @@
           "named": true
         },
         {
+          "type": "interpString",
+          "named": true
+        },
+        {
           "type": "kArray",
           "named": true
         },
@@ -1102,6 +1126,10 @@
           "named": true
         },
         {
+          "type": "interpString",
+          "named": true
+        },
+        {
           "type": "kAbstract",
           "named": true
         },
@@ -1119,6 +1147,10 @@
         },
         {
           "type": "kFalse",
+          "named": true
+        },
+        {
+          "type": "kManaged",
           "named": true
         },
         {
@@ -1362,6 +1394,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -2000,6 +2036,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -2071,6 +2111,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -2162,6 +2206,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -2233,6 +2281,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -2327,6 +2379,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -2568,6 +2624,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -2820,6 +2880,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -3095,6 +3159,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -3382,6 +3450,10 @@
           "named": true
         },
         {
+          "type": "interpString",
+          "named": true
+        },
+        {
           "type": "kFalse",
           "named": true
         },
@@ -3462,6 +3534,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -3625,6 +3701,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -3702,6 +3782,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -3798,6 +3882,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -3875,6 +3963,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -3962,6 +4054,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -4039,6 +4135,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -4131,6 +4231,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -4215,6 +4319,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -4286,6 +4394,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -4380,6 +4492,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -4646,6 +4762,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -4832,6 +4952,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -4903,6 +5027,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -5186,6 +5314,10 @@
           "named": true
         },
         {
+          "type": "interpString",
+          "named": true
+        },
+        {
           "type": "kFalse",
           "named": true
         },
@@ -5262,6 +5394,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -5430,6 +5566,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -5996,6 +6136,10 @@
           "named": true
         },
         {
+          "type": "interpString",
+          "named": true
+        },
+        {
           "type": "kFalse",
           "named": true
         },
@@ -6233,6 +6377,94 @@
     }
   },
   {
+    "type": "package",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kEndDot",
+          "named": true
+        },
+        {
+          "type": "kPackage",
+          "named": true
+        },
+        {
+          "type": "moduleName",
+          "named": true
+        },
+        {
+          "type": "packageContains",
+          "named": true
+        },
+        {
+          "type": "packageRequires",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "packageContains",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kContains",
+          "named": true
+        },
+        {
+          "type": "packageContainsItem",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "packageContainsItem",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "literalString",
+          "named": true
+        },
+        {
+          "type": "moduleName",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "packageRequires",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kRequires",
+          "named": true
+        },
+        {
+          "type": "moduleName",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "procAttribute",
     "named": true,
     "fields": {
@@ -6278,6 +6510,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -6357,6 +6593,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -6619,6 +6859,10 @@
           "named": true
         },
         {
+          "type": "interpString",
+          "named": true
+        },
+        {
           "type": "kDelayed",
           "named": true
         },
@@ -6777,6 +7021,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -6864,6 +7112,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -6975,6 +7227,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -7066,6 +7322,10 @@
           },
           {
             "type": "inherited",
+            "named": true
+          },
+          {
+            "type": "interpString",
             "named": true
           },
           {
@@ -7164,6 +7424,10 @@
           "named": true
         },
         {
+          "type": "package",
+          "named": true
+        },
+        {
           "type": "program",
           "named": true
         },
@@ -7220,6 +7484,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -7299,6 +7567,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -7581,6 +7853,10 @@
         },
         {
           "type": "inherited",
+          "named": true
+        },
+        {
+          "type": "interpString",
           "named": true
         },
         {
@@ -8033,6 +8309,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -8201,6 +8481,10 @@
             "named": true
           },
           {
+            "type": "interpString",
+            "named": true
+          },
+          {
             "type": "kFalse",
             "named": true
           },
@@ -8288,10 +8572,19 @@
   },
   {
     "type": "comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "in",
+    "named": false
+  },
+  {
+    "type": "interpString",
     "named": true
   },
   {
@@ -8380,6 +8673,10 @@
   },
   {
     "type": "kConstructor",
+    "named": true
+  },
+  {
+    "type": "kContains",
     "named": true
   },
   {
@@ -8595,6 +8892,10 @@
     "named": true
   },
   {
+    "type": "kManaged",
+    "named": true
+  },
+  {
     "type": "kMessage",
     "named": true
   },
@@ -8699,6 +9000,10 @@
     "named": true
   },
   {
+    "type": "kPackage",
+    "named": true
+  },
+  {
     "type": "kPacked",
     "named": true
   },
@@ -8768,6 +9073,10 @@
   },
   {
     "type": "kRequired",
+    "named": true
+  },
+  {
+    "type": "kRequires",
     "named": true
   },
   {
@@ -8916,6 +9225,7 @@
   },
   {
     "type": "pp",
-    "named": true
+    "named": true,
+    "extra": true
   }
 ]
